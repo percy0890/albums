@@ -4,12 +4,14 @@ import axios from 'axios';
 
 // making this component class based so that we can fetch data from api
 class AlbumList extends Component {
+  state = { albums: [] }
+
   componentWillMount() {
     axios.get('https://rallycoding.herokuapp.com/api/music_albums')
-      .then(response => console.log(response, 'response'))
+      .then(response => this.setState({ albums: response.data }));
   }
   render() {
-    console.log('render');
+    console.log(this.state)
     return (
       <View>
         <Text>Album List!!!</Text>
@@ -19,3 +21,4 @@ class AlbumList extends Component {
 }
 
 export default AlbumList;
+
