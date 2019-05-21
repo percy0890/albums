@@ -9,7 +9,7 @@ const Card = (props) => (
 
 const styles = {
   cardStyle: {
-    borderWidth: 2,
+    borderWidth: 1,
     borderRadius: 2,
     borderColor: '#ddd',
     borderBottom: 0,
@@ -17,10 +17,9 @@ const styles = {
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 2,
-    padding: 5,
     marginLeft: 5,
     marginRight: 5,
-    marginTop: 5
+    marginTop: 10
   }
 }
 
